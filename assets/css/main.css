@@ -1469,6 +1469,7 @@ h2.entry-title {
 .photo-music {
     justify-content: center;
     display: flex;
+    max-width: 100%;
 }
 
 .description {
