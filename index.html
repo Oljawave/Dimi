@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="This website was made for Dimana only">
+    <meta name="description" content="This website made for Dimana only">
 
     <title>KDL</title>
 
@@ -36,14 +36,42 @@
 
 
     <script>
-        // Функция для отображения уведомления при загрузке страницы
-        function showAlert() {
-            alert("WebSite is updated! New: Other > Story, Something, Music pages. 20.09.2023");
+        // Функция для отображения уведомления и отправки в Telegram
+        function showAlertAndNotifyTelegram() {
+            // Отображаем alert с текстом и кнопкой "OK"
+            var result = confirm("WebSite is updated!\n New: Other > Story, Something, Music pages in MENU\n 20.09.2023\n");
+
+            // Если пользователь нажал "OK", отправляем уведомление в Telegram
+            if (result === true) {
+                // Здесь можно добавить код для отправки уведомления в Telegram
+                // Замените 'YOUR_BOT_TOKEN' и 'YOUR_CHAT_ID' на реальные значения
+                const botToken = '6696675575:AAEPehStWma6FdrrEKzlsC_93hBzky2lcaY';
+                const chatId = '-1001849173993';
+
+                // Создаем запрос к API Telegram
+                fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: 'Кто-то защел на сайт',
+                    }),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                    })
+                    .catch(error => {
+
+                    });
+            }
         }
 
-        // Вызываем функцию showAlert() после полной загрузки страницы
-        window.onload = showAlert;
+        // Вызываем функцию showAlertAndNotifyTelegram() после полной загрузки страницы
+        window.onload = showAlertAndNotifyTelegram;
     </script>
+
 
 </head>
 
@@ -185,8 +213,8 @@
             <div class="info">
                 <h2 data-in-effect="wow flipInX">KALINOVA DIMANA LAMBREVA</h2>
                 <p style="color: red;">website will be updated every Wednesday</p>
-                <p style="color: red;">last update: 20.09.2023 (15:09 astana)</p>
-                <p style="color: red;">New: Music, Other > Story and smthng pages</p>
+                <p style="color: red;">last update: 13.09.2023 (23:56 SF)</p>
+                <p style="color: red;">New: MUSIC, desire and places pages</p>
                 <p style="color: red;">I wanna text u every day, but I'm afraid that u "don't wanna recieve"</p>
                 <p style="color: red;">if it's not, just give me a hint please"</p>
             </div>
@@ -477,6 +505,39 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV1KS10sb3O462XosfZTKohHJwi6C0joo"></script>
     <!-- Custom -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        // Замените 'YOUR_BOT_TOKEN' и 'YOUR_CHAT_ID' на реальные значения
+        const botToken = 'YOUR_BOT_TOKEN';
+        const chatId = 'YOUR_CHAT_ID';
+
+        document.getElementById('closeButton').addEventListener('click', () => {
+            // Создаем запрос к API Telegram
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: 'Кто-то нажал кнопку "Закрыть" на веб-странице!',
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        alert('Уведомление отправлено в Telegram!');
+                    } else {
+                        alert('Произошла ошибка при отправке уведомления.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Произошла ошибка:', error);
+                    alert('Произошла ошибка при отправке уведомления.');
+                });
+        });
+
+    </script>
 
 
 </body>
