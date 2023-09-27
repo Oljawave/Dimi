@@ -100,3 +100,10 @@
 }
 
 #metallpick {}
+
+
+@media (max-width: 767px) {
+    #long {
+        height: 447px;
+    }
+}
