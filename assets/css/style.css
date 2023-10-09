@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  min-height: 150vh;
+  background: linear-gradient(#111425, #16205d);
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.moon {
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.moon:after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(#111425, #3751e0);
+  background-attachment: fixed;
+
+}
+
+.scene i {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  animation: animate linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotateY(-100px);
+  }
+
+}
+
+.centered-text {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.white-text {
+  color: #fff;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#savior {
+  margin-top: 500px;
+  margin-left: 100px;
+
+}
+
+#dream {
+  margin-top: 100px;
+}
+
+#footer-dreams {
+  color: #fff;
+  background: #16205d;
+}
+
+
+@media (max-width: 768px) {
+  #savior {
+    margin-left: 10px;
+
+  }
+}
