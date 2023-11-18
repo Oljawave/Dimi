@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins/flexslider.css">
+    <title>Helpers</title>
+    <!-- Font-Awesome 6 PRO-->
+    <link rel="stylesheet" href="assets/fonts/all.min.css" />
+    <!-- LightCase -->
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins/lightcase.css">
+    <!-- SlickNav -->
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins/slicknav.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins/animate.min.css">
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins/bootstrap.min.css">
+    <!-- Cube Portfolio -->
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins/cubeportfolio.min.css">
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+
+    <style>
+        body {
+            padding: 20px;
+            background-color: #1F2035;
+            background-image: url('assets/images/bg_for_page.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+        }
+
+        .custom-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            /* Add margin to create space between containers */
+        }
+
+        .custom-text,
+        .custom-image {
+            max-width: 50%;
+            color: #fff;
+            font-size: 18px;
+            /* Adjust as needed */
+        }
+
+        .custom-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .custom-image {
+            flex-shrink: 0;
+            /* Prevent the image from shrinking */
+        }
+
+        .main-text {
+            margin-left: 150px;
+            margin-top: 150px;
+            margin-bottom: 50px;
+        }
+
+        .overthinking-container {
+            text-align: center;
+            margin-top: 20px;
+            /* Adjust the margin as needed */
+        }
+
+        .big-word {
+            font-size: 36px;
+            /* Adjust the font size as needed */
+            color: #fff;
+            /* Adjust the color as needed */
+        }
+
+        .small-text {
+            font-size: 16px;
+            /* Adjust the font size as needed */
+            color: #ccc;
+            /* Adjust the color as needed */
+            margin-top: 10px;
+            /* Adjust the margin as needed */
+        }
+
+        @media (max-width: 768px) {
+
+            .custom-text,
+            .custom-image {
+                max-width: 100%;
+                font-size: 12px;
+            }
+
+            .custom-img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .custom-container {
+                margin: 0;
+                /* Remove margin on smaller screens */
+                margin-bottom: 20px;
+            }
+
+            .main-text {
+                margin-top: 10px;
+                margin-bottom: 100px;
+                margin-left: 0px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .custom-img {
+                width: 400px;
+                height: 400px;
+            }
+
+            .custom-container {
+                margin: 0 150px;
+                /* Set margin to 150px on both sides for larger screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script type='text/javascript'>var words = ["DIMANA", "WHAT IF", "PLEASE", "CHANCE", "NEED U"];</script>
+
+    <!-- LOADER TEMPLATE -->
+    <div class="page-loader">
+        <div class="text-loader">
+            <div class="right">
+                <h4 class="randoms"></h4>
+                <h1 class="randoms"></h1>
+                <h4 class="randoms"></h4>
+            </div>
+            <div class="left">
+                <h4 class="randoms"></h4>
+                <h1 class="randoms"></h1>
+                <h4 class="randoms"></h4>
+            </div>
+        </div>
+    </div>
+    <!-- /LOADER TEMPLATE -->
+
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- logo -->
+                    <div class="logo"><a href="index.html" style="color: #fff;">drf</a></div>
+                    <!-- /logo -->
+
+                    <!-- navigation -->
+                    <nav>
+
+                        <div id="rex_menu">
+                            <ul>
+                                <li class="has-sub active">
+                                    <a href="#">
+                                        <span style="color: #fff;">Home</span>
+                                    </a>
+                                </li>
+                                <li class="has-sub">
+                                    <a href="disclaimer.html">
+                                        <span style="color: #fff;">Foreword</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about.html">
+                                        <span style="color: #fff;">About Dimana</span>
+                                    </a>
+                                </li>
+                                <li class="has-sub">
+                                    <a href="olzhas.html">
+                                        <span style="color: #fff;">About Olzhas</span>
+                                    </a>
+                                </li>
+                                <li class="has-sub">
+                                    <a href="places.html">
+                                        <span style="color: #fff;">Places</span>
+                                    </a>
+                                </li>
+                                <li class="has-sub">
+                                    <a href="desire.html">
+                                        <span style="color: #fff;">Desire</span>
+                                    </a>
+                                </li>
+                                <li class="has-sub">
+                                    <a href="music.html">
+                                        <span style="color: #fff;">Music</span>
+                                    </a>
+                                </li>
+
+                                <li class="has-sub">
+                                    <a href="#">
+                                        <span style="color: #fff;">Other</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="story.html">
+                                                <span style="color: #fff;">Story</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="songs.html">
+                                                <span style="color: #fff;">Something</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="additional.html">
+                                                <span style="color: #fff;">Direction</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="dreams.html">
+                                                <span style="color: #fff;">Savior</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="memory.html">
+                                                <span style="color: #fff;">Moments</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="helpers.html">
+                                                <span style="color: #fff;">Helpers</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="has-sub">
+                                    <a href="thoughts.html">
+                                        <span style="color: #fff;">Thoughts</span>
+                                    </a>
+                                </li>
+                                <li class="has-sub">
+                                    <a href="letter.html">
+                                        <span style="color: #fff;">Letter</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </nav>
+                    <!-- /navigation -->
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-text" style="text-align: left; color: #fff; margin-top: 20px;">
+        <h1 style="font-weight: bold;">Cookies</h1>
+        <p>Here are all the factors that helped me take the first steps and improve relationship:</p>
+    </div>
+
+
+
+    <div class="custom-container">
+        <div class="custom-text">
+            <p>Well, of course, first of all, I want to write about Adam Sandler, who helped make you smile. This
+                legendary algorithm that worked perfectly, and most importantly made you laugh... Я никогда не использую
+                эту технологию, ведь она полность связана с тобой</p>
+        </div>
+        <div class="custom-image">
+            <img class="custom-img" src="assets/images/adam.png" alt="Your Image">
+        </div>
+    </div>
+
+    <!-- Additional containers -->
+    <div class="custom-container">
+        <div class="custom-image">
+            <img class="custom-img" src="assets/images/history.png" alt="Your Image">
+        </div>
+        <div class="custom-text">
+            <p>Knowledge of history and geography played a special role. They have become not only a source of
+                fascinating stories and interesting facts, but also a way to expand our horizons. Discussing historical
+                events and different parts of the world added depth and variety to our conversations. Nobody understood
+                us</p>
+        </div>
+    </div>
+
+    <div class="custom-container">
+        <div class="custom-text">
+            <p>Our common interests in cinema became a real source of inspiration and discussion for us. Your
+                preferences in films have become not only a reflection of your taste, but also a source of new
+                impressions for me. It's good that I'm good at this.</p>
+        </div>
+        <div class="custom-image">
+            <img class="custom-img" src="assets/images/avatar.png" alt="Your Image">
+        </div>
+    </div>
+
+    <div class="custom-container" style="margin-bottom: 50px;">
+        <div class="custom-image">
+            <img class="custom-img" src="assets/images/jokes.png" alt="Your Image">
+        </div>
+        <div class="custom-text">
+            <p>One day I decided to share a joke about Jews, and to my surprise, I was able to deliver it. Perhaps a
+                good moment of humor can connect us, even if the topic seems a little sensitive. Thanks to Jews and
+                black jokes.</p>
+        </div>
+    </div>
+
+    <div class="custom-container">
+        <div class="custom-text">
+            <p>The musical mood played a key role in our connection. Your musical preferences have become part of our
+                memories, capturing every moment, supported by sound. From the cheerful melodies that accompanied our
+                meetings to touching songs.</p>
+        </div>
+        <div class="custom-image">
+            <img class="custom-img" src="assets/images/charlie.png" alt="Your Image">
+        </div>
+    </div>
+
+    <div class="custom-container" style="margin-bottom: 50px;">
+        <div class="custom-image">
+            <img class="custom-img" src="assets/images/smile.png" alt="Your Image">
+        </div>
+        <div class="custom-text">
+            <p>Your smile is the most beautiful thing I have seen. In it I find light, warmth and incredible strength.
+                She is like a magnet that attracts positive emotions and makes your days brighter. You always said that
+                you never gave me anything, but your smile was and is more valuable than all the gifts in the world.</p>
+        </div>
+    </div>
+
+    <div class="custom-container">
+        <div class="custom-text">
+            <p>Your passion for photography not only preserves our memories, but also adds an incredible visual
+                dimension to them. Thanks to you, every frame becomes a small work of art, reflecting your love for
+                beauty and life. My camera is already covered in dust...</p>
+        </div>
+        <div class="custom-image">
+            <img class="custom-img" src="assets/images/photo.png" alt="Your Image">
+        </div>
+    </div>
+
+    <div class="overthinking-container">
+        <h1 class="big-word">OVERTHINKING</h1>
+        <p class="small-text" style="font-style: italic;">overthinker never stops caring so much</p>
+        <p class="small-text">Instead of seeing it as unnecessary, I try to channel this flow of thoughts into
+            understanding and better relationships. This is my way of expressing love, care, understanding, outlook,
+            desire and I hope that you see something beautiful in it as I do.</p>
+        <p class="small-text">Maybe I am just crazyyyy.</p>
+
+    </div>
+
+    <footer>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- copyright -->
+                    <div class="copyright">
+                        © 2023 | Designed by Oljawave
+                    </div>
+                    <!-- /copyright -->
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- /footer -->
+
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="assets/js/plugins/jquery-1.12.4.min.js"></script>
+    <!-- Modernizr -->
+    <script src="assets/js/plugins/modernizr.js"></script>
+    <!-- jQuery.appear -->
+    <script src="assets/js/plugins/jquery.appear.js"></script>
+    <!-- Lettering -->
+    <script src="assets/js/plugins/lettering.js"></script>
+    <!-- Textillate -->
+    <script src="assets/js/plugins/textillate.js"></script>
+    <!-- Wow -->
+    <script src="assets/js/plugins/wow.js"></script>
+    <!-- Jarallax -->
+    <script src="assets/js/plugins/jarallax.js"></script>
+    <!-- Lightcase -->
+    <script src="assets/js/plugins/lightcase.js"></script>
+    <!-- Skills bar -->
+    <script src="assets/js/plugins/skills-bar.js"></script>
+    <!-- Slick Nav -->
+    <script src="assets/js/plugins/slick-nav.js"></script>
+    <!-- Flex Slider -->
+    <script src="assets/js/plugins/flexslider.js"></script>
+    <!-- Images Loaded -->
+    <script src="assets/js/plugins/images-loaded.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/plugins/isotope.js"></script>
+    <!-- Sticky Plugin -->
+    <script src="assets/js/plugins/jquery.sticky.js"></script>
+    <!-- Cube Portfolio -->
+    <script src="assets/js/plugins/jquery.cubeportfolio.min.js"></script>
+    <!-- Google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV1KS10sb3O462XosfZTKohHJwi6C0joo"></script>
+    <!-- Custom -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
