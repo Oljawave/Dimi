@@ -1,0 +1,562 @@
+<!DOCTYPE HTML>
+<html lang="en" class="no-js">
+
+<head>
+
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <title>Poezia</title>
+
+   <!-- ============ Google Fonts ============ -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+
+   <!-- CSS -->
+   <!-- Flexslider -->
+   <link rel="stylesheet" type="text/css" href="assets/css/plugins/flexslider.css">
+   <!-- Font-Awesome 6 PRO-->
+   <link rel="stylesheet" href="assets/fonts/all.min.css" />
+   <!-- LightCase -->
+   <link rel="stylesheet" type="text/css" href="assets/css/plugins/lightcase.css">
+   <!-- SlickNav -->
+   <link rel="stylesheet" type="text/css" href="assets/css/plugins/slicknav.min.css">
+   <!-- Animate -->
+   <link rel="stylesheet" type="text/css" href="assets/css/plugins/animate.min.css">
+   <!-- Bootstrap 5 -->
+   <link rel="stylesheet" type="text/css" href="assets/css/plugins/bootstrap.min.css">
+   <!-- Cube Portfolio -->
+   <link rel="stylesheet" type="text/css" href="assets/css/plugins/cubeportfolio.min.css">
+   <!-- Custom styles CSS -->
+   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+   <!-- Favicon -->
+   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+
+   <style>
+      .page {
+         position: relative;
+         box-sizing: border-box;
+         max-width: 350px;
+         font-family: cursive;
+         font-size: 16px;
+         border-radius: 10px;
+         background: #fff;
+         background-image: linear-gradient(#f5f5f0 1.1rem, #ccc 1.2rem);
+         background-size: 100% 1.2rem;
+         line-height: 1.2rem;
+         padding: 1.4rem 0.5rem 0.3rem 4.5rem;
+      }
+
+      .page::before,
+      .page::after {
+         position: absolute;
+         content: "";
+         bottom: 10px;
+         width: 40%;
+         height: 10px;
+         box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+         z-index: -1;
+         transition: all 0.3s ease;
+      }
+
+      .page::before {
+         left: 15px;
+         transform: skew(-5deg) rotate(-5deg);
+      }
+
+      .page::after {
+         right: 15px;
+         transform: skew(5deg) rotate(5deg);
+      }
+
+      .page:hover::before,
+      .page:hover::after {
+         box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+      }
+
+      .margin {
+         position: absolute;
+         border-left: 1px solid #d88;
+         height: 100%;
+         left: 3.3rem;
+         top: 0;
+      }
+
+      .page p {
+         margin: 0;
+         text-indent: 1rem;
+         padding-bottom: 1.2rem;
+         color: black;
+         line-height: 20px;
+      }
+   </style>
+</head>
+
+<body>
+
+
+   <script type='text/javascript'>var words = ["DIMANA", "WHAT IF", "PLEASE", "CHANCE", "NEED U"];</script>
+
+   <!-- LOADER TEMPLATE -->
+   <div class="page-loader">
+      <div class="text-loader">
+         <div class="right">
+            <h4 class="randoms"></h4>
+            <h1 class="randoms"></h1>
+            <h4 class="randoms"></h4>
+         </div>
+         <div class="left">
+            <h4 class="randoms"></h4>
+            <h1 class="randoms"></h1>
+            <h4 class="randoms"></h4>
+         </div>
+      </div>
+   </div>
+   <!-- /LOADER TEMPLATE -->
+
+
+   <header>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+
+               <!-- logo -->
+               <div class="logo"><a href="index.html">drf</a></div>
+               <!-- /logo -->
+
+               <!-- navigation -->
+               <nav>
+
+                  <div id="rex_menu">
+                     <ul>
+                        <li class="has-sub">
+                           <a href="index.html">
+                              <span>Home</span>
+                           </a>
+                        </li>
+                        <li class="has-sub">
+                           <a href="disclaimer.html">
+                              <span>Foreword</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="about.html">
+                              <span>About Dimana</span>
+                           </a>
+                        </li>
+                        <li class="has-sub">
+                           <a href="olzhas.html">
+                              <span>About Olzhas</span>
+                           </a>
+                        </li>
+                        <li class="has-sub active">
+                           <a href="desire.html">
+                              <span>desire</span>
+                           </a>
+                        </li>
+                        <li class="has-sub">
+                           <a href="music.html">
+                              <span>Music</span>
+                           </a>
+                        </li>
+                        <li class="has-sub">
+                           <a href="thoughts.html">
+                              <span>Thoughts</span>
+                           </a>
+                        </li>
+                        <li class="has-sub">
+                           <a href="#">
+                              <span>Other</span>
+                           </a>
+                           <ul>
+                              <li>
+                                 <a href="story.html">
+                                    <span>Story</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="songs.html">
+                                    <span>Something</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="additional.html">
+                                    <span>Direction</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="dreams.html">
+                                    <span>Savior</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="portfolio-alternative.html">
+                                    <span>Details</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="has-sub">
+                           <a href="#">
+                              <span>Attachments</span>
+                           </a>
+                           <ul>
+                              <li>
+                                 <a href="kakvo.html">
+                                    <span>Notebook</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="poezia.html">
+                                    <span>Poezia</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="has-sub">
+                           <a href="letter.html">
+                              <span>Letter</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+
+               </nav>
+               <!-- /navigation -->
+
+
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <!-- wrapper -->
+   <div id="wrapper">
+
+      <div class="container">
+         <div class="row">
+            <div class="col-md-9">
+
+               <div id="grid-blog" class="cbp">
+
+                  <!-- post 1 -->
+                  <article class="cbp-item post">
+                     <div class="entry-header">
+                        <h2 class="entry-title">
+                           <a rel="bookmark">Поезия</a>
+                           <p style="font-style: italic; font-size: 14px;">if you visit the website, I would like you to
+                              read these poems, because simple words cannot express my feelings
+                           </p>
+                        </h2>
+                        <div class="post-details">
+                           <div class="post-date">
+                              <i class="fa-solid fa-pen"></i> Александр Сергеевич Пушкин
+                           </div>
+
+                        </div>
+                        <div class="post-info">
+                           <div class="page">
+                              <div class="margin"></div>
+                              <p><br>
+                                 Мига вълшебен аз си спомням:<br>
+                                 пред мене ти се появи<br>
+                                 като видение чаровно,<br>
+                                 на красотата гений жив.<br>
+                                 <br>
+                                 В тъгите, гаснещ без надежда,<br>
+                                 в тревожен шум от суета,<br>
+                                 звучеше ми гласът ти нежен<br>
+                                 и виждах образа в съня.<br>
+                                 <br>
+                                 В затънтен мрак на заточение<br>
+                                 изнизваха се мойте дни<br>
+                                 без божества, без вдъхновение,<br>
+                                 без обич, трепет и сълзи.<br>
+                              </p>
+                           </div>
+
+                        </div>
+                     </div>
+                  </article>
+                  <!-- /post 1 -->
+
+                  <!-- post 2 -->
+                  <article class="cbp-item post">
+                     <div class="entry-header">
+                        <div class="post-intro type-quote" style="background-image: url('assets/images/poetry1.jpg');">
+                           <blockquote>
+                              <p>
+                                 Колко и да е разстоянието между нас, колко и да е времето, преминало, никой не може да
+                                 заеме твоето място в моето сърце....
+                              </p>
+                              <cite>прости ме...</cite>
+                           </blockquote>
+                        </div>
+                        <h2 class="entry-title">
+                           <a rel="bookmark">Мисълът на песента е просто..</a>
+                        </h2>
+                        <div class="post-details">
+                           <div class="post-date">
+                              <i class="fa-solid fa-music"></i> Scriptonite - КОСМОС
+                           </div>
+                        </div>
+                        <div class="post-info">
+                           <div class="page">
+                              <div class="margin"></div>
+                              <p><br>
+                                 Ти изглеждаш като казино<br>
+                                 Задлъжавам се тежко, но все още се впускам в нулата пиян<br>
+                                 Ти изглеждаш като в кино.<br>
+                                 Ти си като пиано, но не искам да свиря в минор<br>
+                                 <br>
+                                 Ти си най-защитаваната банка,<br>
+                                 И животът вика: "Ограби го, за един милион!<br>
+                                 Не, за всички милиони на света!"<br>
+                                 Ти изглеждаш като удоволствие, ти си като перленка<br>
+                                 И разцепваш ме на парчета като мортира<br>
+                                 <br>
+                                 Ти си като класацията, издигаш ме нагоре<br>
+                                 Джакпот! Джакпот! Ти изглеждаш като успех<br>
+                                 Като 808-та сред радиошума<br>
+                                 Като пистолет в устата, headshot,<br>
+                                 Като стихове, като най-хитовия текст<br>
+                                 <br>
+                                 Изглеждаш като полюс.<br>
+                                 Ти си по-високо от Еверест<br>
+                                 Ти си точно като космос — по-високо от небесата<br>
+                              </p>
+                           </div>
+
+                        </div>
+                     </div>
+                  </article>
+                  <!-- /post 2 -->
+
+                  <!-- post 3 -->
+                  <article class="cbp-item post">
+                     <div class="entry-header">
+                        <div class="post-intro type-quote" style="background-image: url('assets/images/poetry2.jpg');">
+                           <blockquote>
+                              <p>
+                                 А как да обясня, че ти си единственият човек, от когото се нуждая най-много, и това
+                                 изобщо не е егоизъм..
+                              </p>
+                              <cite>как да обясня</cite>
+                           </blockquote>
+                        </div>
+                        <h2 class="entry-title">
+                           <a rel="bookmark"></a>
+                        </h2>
+                        <div class="post-details">
+                           <div class="post-date">
+                              <i class="fa-solid fa-pen"></i> Unknown
+                           </div>
+                        </div>
+                        <div class="post-info">
+                           <div class="page">
+                              <div class="margin"></div>
+                              <p><br>
+                                 Мисля за теб...<br>
+                                 <br>
+                                 Когато се събуждам сутрин,<br>
+                                 И сред тълпата многолюдна,<br>
+                                 Ясно и неосъзнато<br>
+                                 Мисля за теб.<br>
+                                 <br>
+                                 И под завивката през нощта,<br>
+                                 И карайки по шосето в колата,<br>
+                                 И през деня при работния плот<br>
+                                 Отсега завинаги<br>
+                                 Мисля за теб...<br>
+                                 <br>
+                                 В празничен или работен ден,<br>
+                                 В слънчев или мъглив ден,<br>
+                                 В лек или най-тежък ден,<br>
+                                 Докато не дойде Съдният Ден -<br>
+                                 Мисля за теб.
+                              </p>
+                           </div>
+
+                        </div>
+                     </div>
+                  </article>
+                  <!-- /post 3 -->
+
+                  <article class="cbp-item post">
+                     <div class="entry-header">
+                        <div class="post-intro type-quote" style="background-image: url('assets/images/poetry3.jpg');">
+                           <blockquote>
+                              <p>
+                                 Всеки в този живот зависи от нещо, някои от телефона, а аз от твоите очи и красива
+                                 усмивка
+                              </p>
+                              <cite>пристрастяване</cite>
+                           </blockquote>
+                        </div>
+                        <h2 class="entry-title">
+                           <a rel="bookmark"></a>
+                        </h2>
+                        <div class="post-details">
+                           <div class="post-date">
+                              <i class="fa-solid fa-pen"></i> Виктория Нахимова
+                           </div>
+                        </div>
+                        <div class="post-info">
+                           <div class="page">
+                              <div class="margin"></div>
+                              <p><br>
+                                 Ти ми се съниш...<br>
+                                 Понякога те си представям,<br>
+                                 Твоите нежни ръце, устни, очи.<br>
+                                 Просто безнадеждно, толкова ми липсваш,<br>
+                                 Всеки момент, сякаш минават години.<br>
+                                 <br>
+                                 Не стъпки, а километри ни разделят,<br>
+                                 И не час, а вечност е пътят пред нас.<br>
+                                 Между нас свирят вселенски ветрове,<br>
+                                 Като деца в криеница - опитай да ме намериш.<br>
+                                 <br>
+                                 Сред хиляди други... твоето отражение,<br>
+                                 Ароматът е по-сладък от всички аромати,<br>
+                                 Това твърде много напомня на наваждение,<br>
+                                 И диагнозът е поставен - "пациентът не е здрав".<br>
+                                 <br>
+                                 Но това не се лекува, причината зная,<br>
+                                 Доктор би казал така: <br>
+                                 "Вероятно няма да помогна"...<br>
+                                 <br>
+                                 Ти ми се съниш.... <br>
+                                 Често си спомням за теб,<br>
+                                 И по-скоро напълно не мога да те забравя.<br>
+                              </p>
+                           </div>
+
+                        </div>
+                     </div>
+                  </article>
+
+                  <article class="cbp-item post">
+                     <div class="entry-header">
+                        <div class="post-intro type-quote" style="background-image: url('assets/images/poetry4.jpg');">
+                           <blockquote>
+                              <p>
+                                 Забрави те? С кого ще споделя<br>
+                                 тъги, радости и всяко чувство?<br>
+                                 По-добре всички да забравят мене,<br>
+                                 отколкото да те забравя аз...<br>
+                              </p>
+                              <cite>Сергей Есенин</cite>
+                           </blockquote>
+                        </div>
+                        <h2 class="entry-title">
+                           <a rel="bookmark"></a>
+                        </h2>
+                        <div class="post-details">
+                           <div class="post-date">
+                              <i class="fa-solid fa-pen"></i> Емир Мардонкулов
+                           </div>
+                        </div>
+                        <div class="post-info">
+                           <div class="page">
+                              <div class="margin"></div>
+                              <p><br>
+                                 Не си виновен<br>
+                                 Това са само моите мечти.<br>
+                                 И не ми трябва нищо друго<br>
+                                 Само Ти си това, което исках.<br>
+                                 <br>
+                                 Просто е лош моментът<br>
+                                 Това е вик от студ.<br>
+                                 Хареса ми красивото лице<br>
+                                 И ти беше това, което исках.<br>
+                                 <br>
+                                 Не беше просто момент<br>
+                                 Това бяха рани от празнота.<br>
+                                 И като прекрасно видение,<br>
+                                 Ти беше това, което исках.<br>
+                                 <br>
+                                 Това е само моята утеха<br>
+                                 Това са само моите мечти.<br>
+                                 И не ми трябва нищо друго<br>
+                                 Имам нужда само от теб.
+                              </p>
+                           </div>
+
+                        </div>
+                     </div>
+                  </article>
+
+
+               </div>
+
+
+            </div>
+
+
+         </div>
+      </div>
+   </div>
+   <!-- /wrapper -->
+
+   <!-- footer -->
+   <footer>
+
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+
+               <!-- copyright -->
+               <div class="copyright">
+                  © 2023 | Designed by Oljawave
+               </div>
+               <!-- /copyright -->
+
+            </div>
+         </div>
+      </div>
+
+   </footer>
+   <!-- /footer -->
+
+   <!-- Javascript files -->
+   <!-- jQuery -->
+   <script src="assets/js/plugins/jquery-1.12.4.min.js"></script>
+   <!-- Modernizr -->
+   <script src="assets/js/plugins/modernizr.js"></script>
+   <!-- jQuery.appear -->
+   <script src="assets/js/plugins/jquery.appear.js"></script>
+   <!-- Lettering -->
+   <script src="assets/js/plugins/lettering.js"></script>
+   <!-- Textillate -->
+   <script src="assets/js/plugins/textillate.js"></script>
+   <!-- Wow -->
+   <script src="assets/js/plugins/wow.js"></script>
+   <!-- Jarallax -->
+   <script src="assets/js/plugins/jarallax.js"></script>
+   <!-- Lightcase -->
+   <script src="assets/js/plugins/lightcase.js"></script>
+   <!-- Skills bar -->
+   <script src="assets/js/plugins/skills-bar.js"></script>
+   <!-- Slick Nav -->
+   <script src="assets/js/plugins/slick-nav.js"></script>
+   <!-- Flex Slider -->
+   <script src="assets/js/plugins/flexslider.js"></script>
+   <!-- Images Loaded -->
+   <script src="assets/js/plugins/images-loaded.js"></script>
+   <!-- Isotope -->
+   <script src="assets/js/plugins/isotope.js"></script>
+   <!-- Sticky Plugin -->
+   <script src="assets/js/plugins/jquery.sticky.js"></script>
+   <!-- Cube Portfolio -->
+   <script src="assets/js/plugins/jquery.cubeportfolio.min.js"></script>
+   <!-- Google map -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV1KS10sb3O462XosfZTKohHJwi6C0joo"></script>
+   <!-- Custom -->
+   <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
