@@ -36,28 +36,26 @@
 
 
     <script>
-        
         function showAlertAndNotifyTelegram() {
-    
-            var result = confirm("\n NEW UPDATE \n Days -> 24.07 page\n 24.07.2024 (14:12 Astana)");
 
-        
+            var result = confirm("\n NEW UPDATE \n Days -> 08.08 page\n 08.08.2024 (18:19 Astana)");
+
+
             if (result === true) {
                 const botToken = '6696675575:AAEPehStWma6FdrrEKzlsC_93hBzky2lcaY';
                 const chatId = '-1001849173993';
                 fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: 'Кто-то зашел на сайт',
-                    }),
-                })
-                    .then(response => response.json())
-                    .then(data => {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: 'Кто-то зашел на сайт',
+                        }),
                     })
+                    .then(response => response.json())
+                    .then(data => {})
                     .catch(error => {
 
                     });
@@ -72,7 +70,9 @@
 <body>
 
 
-    <script type='text/javascript'>var words = ["DIMANA", "WHAT IF", "PLEASE", "CHANCE", "NEED U"];</script>
+    <script type='text/javascript'>
+        var words = ["DIMANA", "WHAT IF", "PLEASE", "CHANCE", "NEED U"];
+    </script>
 
     <!-- LOADER TEMPLATE -->
     <div class="page-loader">
@@ -102,7 +102,7 @@
                     <!-- /logo -->
 
                     <!-- navigation -->
-<nav>
+                    <nav>
 
                         <div id="rex_menu">
                             <ul>
@@ -359,9 +359,14 @@
                                                 <span style="color: #fff;">17.07</span>
                                             </a>
                                         </li>
-                                         <li>
+                                        <li>
                                             <a href="anotherone.html">
-                                                <span style="color: #fff;">24.07(new)</span>
+                                                <span style="color: #fff;">24.07</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pirozhok.html">
+                                                <span style="color: #fff;">08.08(new)</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -391,8 +396,8 @@
         <div class="parallax" style="background-image: url(assets/images/parallax-1.jpg)">
             <div class="info">
                 <h2 data-in-effect="wow flipInX">KALINOVA DIMANA LAMBREVA</h2>
-                <p style="color: red;">New: MENU -> DAYS -> 17.07</p>
-                <p style="color: red;">last update: 17.07.2024 (15:18 Astana)</p>
+                <p style="color: red;">New: MENU -> DAYS -> 08.08</p>
+                <p style="color: red;">last update: 08.08.2024 (18:19 Astana)</p>
                 <p style="color: red;">website will be updated every Wednesday</p>
                 <p style="color: red;">I wanna text u every day, but I'm afraid that u "don't wanna recieve"</p>
             </div>
@@ -412,7 +417,7 @@
                     <div id="grid-classic" class="cbp classicAnim">
 
 
-                       
+
 
                         <div class="cbp-item illustration">
                             <a href="">
@@ -422,7 +427,7 @@
                                 <div class="caption-box">
                                     <div class="caption-center-box">
                                         <div class="caption-body">
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -437,7 +442,7 @@
                                 <div class="caption-box">
                                     <div class="caption-center-box">
                                         <div class="caption-body">
-                                       
+
                                         </div>
                                     </div>
                                 </div>
@@ -452,14 +457,14 @@
                                 <div class="caption-box">
                                     <div class="caption-center-box">
                                         <div class="caption-body">
-                                       
+
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
 
-                    
+
                         <!-- portfolio item 1 -->
                         <div class="cbp-item illustration">
                             <a href="">
@@ -741,15 +746,15 @@
         document.getElementById('closeButton').addEventListener('click', () => {
             // Создаем запрос к API Telegram
             fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    chat_id: chatId,
-                    text: 'Кто-то нажал кнопку "Закрыть" на веб-странице!',
-                }),
-            })
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: 'Кто-то нажал кнопку "Закрыть" на веб-странице!',
+                    }),
+                })
                 .then(response => response.json())
                 .then(data => {
                     if (data.ok) {
@@ -763,7 +768,6 @@
                     alert('Произошла ошибка при отправке уведомления.');
                 });
         });
-
     </script>
 
 
