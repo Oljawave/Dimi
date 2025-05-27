@@ -186,53 +186,35 @@
         }
         window.onload = showAlertAndNotifyTelegram;
 
-        function sendMessageToTelegram() {
-    const input = document.getElementById('userMessage');
-    const message = input.value.trim();
-    if (!message) {
-        // Просто ничего не делаем, если пустое сообщение
-        return;
-    }
+                function sendMessageToTelegram() {
+            const input = document.getElementById('userMessage');
+            const message = input.value.trim();
+            if (!message) {
+                alert("Please write something!");
+                return;
+            }
 
-    fetch('https://ipwho.is/json')
-        .then(response => response.json())
-        .then(location => {
-            const ip = location.ip || '';
-            const country = location.country_name || '';
-            sendTelegramMessage(message, ip, country);
-        })
-        .catch(() => {
-            // Если ошибка — отправляем только сообщение без IP и страны
-            sendTelegramMessage(message, '', '');
-        });
-
-    function sendTelegramMessage(msg, ip, country) {
-        let fullMessage = `Сообщение от пользователя: ${msg}`;
-        if (ip && country) {
-            fullMessage += `\nIP: ${ip}\nСтрана: ${country}`;
+            const botToken = '6696675575:AAEPehStWma6FdrrEKzlsC_93hBzky2lcaY';
+            const chatId = '-1001849173993';
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: `Сообщение от пользователя: ${message}`,
+                    }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert("Message sent!");
+                    input.value = '';
+                })
+                .catch(error => {
+                    alert("Error sending message.");
+                });
         }
-
-        const botToken = '6696675575:AAEPehStWma6FdrrEKzlsC_93hBzky2lcaY';
-        const chatId = '-1001849173993';
-
-        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: fullMessage,
-            }),
-        })
-        .then(response => response.json())
-        .then(() => {
-            input.value = '';
-        })
-        .catch(() => {
-        });
-    }
-}
 
     </script>
 
