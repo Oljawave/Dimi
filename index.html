@@ -89,6 +89,76 @@
                 width: 300px;
             }
         }
+
+        .chat-container {
+      max-width: 600px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      padding: 40px;
+      background-color: white;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 640px) {
+      .chat-container {
+        max-width: 380px;
+      }
+    }
+
+    .message {
+      max-width: 280px;
+      padding: 16px 24px;
+      /* background-color: #f8f8f8; */
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin: 16px 0;
+      position: relative;
+    }
+
+    .message.you::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 20px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid #ccc;
+    }
+
+    .message.other::before {
+      content: "";
+      position: absolute;
+      right: -10px;
+      top: 20px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid #ccc;
+    }
+
+    .sender {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .timestamp {
+      font-size: 12px;
+      color: #777;
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    .you {
+      align-self: flex-start;
+    }
+
+    .other {
+      align-self: flex-end;
+      margin-left: auto;
+    }
     </style>
     
 
@@ -199,6 +269,22 @@
             <small>You can text here anything you want to</small>
             <input type="text" id="userMessage" placeholder="Write your message...">
             <button onclick="sendMessageToTelegram()">Send</button>
+        </div>
+
+        <div class="chat-container">
+        
+            <div class="message you">
+            <div class="sender">You</div>
+            <div>Hello world</div>
+            <div class="timestamp">14:42 • May 26, 2025</div>
+            </div>
+
+            <div class="message other">
+            <div class="sender">Oljawave</div>
+            <div>World says hi</div>
+            <div class="timestamp">11:35 • May 27, 2025</div>
+            </div>
+
         </div>
 
     </div>
