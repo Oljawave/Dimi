@@ -194,7 +194,7 @@
         return;
     }
 
-    fetch('https://ipapi.co/json/')
+    fetch('https://ipwho.is/json')
         .then(response => response.json())
         .then(location => {
             const ip = location.ip || '';
